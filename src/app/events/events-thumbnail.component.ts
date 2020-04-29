@@ -1,5 +1,4 @@
-import { Component, Input } from "@angular/core";
-import { Template } from '@angular/compiler/src/render3/r3_ast';
+import { Component, Input, Output,EventEmitter } from "@angular/core";
 
 @Component({
 selector:'event-thumbnail',
@@ -14,10 +13,17 @@ template:`
    <span>&nbsp;</span>
    <span>{{event.location.city}}, {{event.location.country}}</span>
   </div>
-</div>
+  </div>
 `
 })
 
 export class EventThumbnailComponent{
-@Input() event:any
+@Input() event:any;
+somePro:string='Show';
+
+logfoo(){
+  console.log("logFOOOOOO... "); 
+ }
+
+
 }
