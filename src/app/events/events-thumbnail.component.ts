@@ -14,9 +14,10 @@ template:`
    <span class="pad-left">{{event.location.city}}, {{event.location.country}}</span>
   </div>
   </div>
-  <button class="btn btn-primary" (click)="handleClickme()">click me</button>
+  
 `,
 styles:[` 
+.thumbnail {min-height:210px}
 .pad-left {margin-left: 10px;}
 .well div {color: #bbb;}
 `]
@@ -28,10 +29,5 @@ export class EventThumbnailComponent{
 pro:string="Show me the money";
 
 
-
-handleClickme(){
-  this.eventclick.emit(this.event.name);
-  
-}
 
 }
