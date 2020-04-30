@@ -6,7 +6,7 @@ template:`
 <div class="well hoverwell thumbnail">
    <h2>{{event?.name}}</h2>
     <div>Date: {{event?.date}}</div>
-    <div [ngSwitch]="event?.time">
+    <div  [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time">
       Time: {{event?.time}}
        <span *ngSwitchCase="'8:00 am'">(Early Start)</span>
        <span *ngSwitchCase="'10:00 am'">(Late Start)</span>
@@ -25,7 +25,9 @@ template:`
   
 `,
 styles:[` 
-.thumbnail {min-height:210px}
+.green {color: #003300 !important;}
+.bold { font-weight: bold; }
+.thumbnail {min-height:210px;}
 .pad-left {margin-left: 10px;}
 .well div {color: #bbb;}
 `]
@@ -37,5 +39,18 @@ export class EventThumbnailComponent{
 pro:string="Show me the money";
 
 
+
+
+
+// [class.green]="event?.time ==='8:00 am'"
+// [ngClass]="{green: event?.time==='8:00 am', bold: event?.time==='8:00 am'}"
+getStartTimeClass(){
+  const Early= this.event && this.event.time ==='8:00 am';
+  return {green: Early, bold: Early };
+// if( this.event && this.event.time ==='8:00 am')
+// return 'green bold'  //return ['green', 'bold'] 
+// return ''             // return [] 
+
+}
 
 }
