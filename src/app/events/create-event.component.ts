@@ -13,6 +13,7 @@ template:`<h1>New Event</h1>
 })
 
 export class CreateEventComponent{
+    isDirty:boolean=true;
 
     constructor(private router:Router){
 
