@@ -4,7 +4,8 @@ declare let toastr :any;
 
 @Injectable()
 export class ToastrService{
-    success(message:string, title?:string){
+
+ success(message:string, title?:string){
     toastr.success(message,title)
  }
  info(message:string, title?:string){
