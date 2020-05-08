@@ -1,5 +1,5 @@
 import { Component, Input, Output,EventEmitter } from "@angular/core";
-
+import {IEvent} from './share/index'
 @Component({
 selector:'event-thumbnail',
 template:`
@@ -33,7 +33,7 @@ styles:[`
 })
 
 export class EventThumbnailComponent{
-@Input() event:any;
+@Input() event:IEvent;
 @Output() eventclick= new EventEmitter();
 pro:string="Show me the money";
 
