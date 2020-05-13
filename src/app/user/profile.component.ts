@@ -16,19 +16,19 @@ import { Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
        profileForm:FormGroup;
-       private firstName:FormControl;
-       private lastName:FormControl
+       private FirstName:FormControl;
+       private LastName:FormControl;
 
        constructor(private authService:AuthService, private router:Router){
 
        }
   ngOnInit(){
-    this.firstName = new FormControl(this.authService.currentUser.firstName, [Validators.required,
+    this.FirstName = new FormControl(this.authService.currentUser.firstName, [Validators.required,
     Validators.pattern('[a-zA-Z].*')]); //, Validators.required
-    this.lastName= new FormControl(this.authService.currentUser.lastName, Validators.required); //, Validators.required
+    this.LastName= new FormControl(this.authService.currentUser.lastName, Validators.required); //, Validators.required
     this.profileForm = new FormGroup({
-      firstName:this.firstName,
-      lastName:this.lastName
+      firstName:this.FirstName,
+      lastName:this.LastName
     })
   }
   saveProfile(formValues){
@@ -42,11 +42,11 @@ export class ProfileComponent implements OnInit {
     this.router.navigate(['events']);
   }
   validateFirstName(){
-    return this.firstName.valid || this.firstName.untouched;
+    return this.FirstName.valid || this.FirstName.untouched;
     }
 
   validateLastName(){
-  return this.lastName.valid || this.lastName.untouched;
+  return this.LastName.valid || this.LastName.untouched;
   }
 
 
