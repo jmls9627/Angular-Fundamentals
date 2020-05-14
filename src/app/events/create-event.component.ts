@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { IEvent, EventService } from './share';
 @Component({
@@ -13,20 +13,40 @@ em {float:right; color:#E05C65; padding-left:10px}
 `]
 })
 
-export class CreateEventComponent{
+export class CreateEventComponent {
+    event:any;
     newEvent;
     isDirty:boolean=true;
 
     constructor(private router:Router, private eventService:EventService ){
 
     }
+
+   ngOnInit(){
+    this.event= {
+      name: 'NgSpectacular',
+      date:new Date('3/29/2086') ,
+      time: '10:00 am',
+      price: 700.99,
+      location: {
+        address: '1057 DT',
+        city: 'London',
+        country: 'England'
+      },
+      onlineUrl:'http://ngSpectacular.com',
+      imageUrl:'http://ngSpectacular.com/logo.png'
+  }
+
+   }
+
     saveEvent(formValues){
      this.eventService.saveEvent(formValues);
      this.isDirty=false;
      this.router.navigate(['/events']);
 
     }
+    
     cancel() {
       this.router.navigate(['/events'])
     }
-}
+  }

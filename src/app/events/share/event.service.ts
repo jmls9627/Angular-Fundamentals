@@ -26,6 +26,7 @@ export class EventService{
       event.id=999;
       event.session=[];
       EVENTS.push(event);
+      
 
     }
 }
