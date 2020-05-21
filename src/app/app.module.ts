@@ -52,12 +52,14 @@ declare let toastr : Toastr;
     
    
    
-    
+     
 
   ],
  
   providers: [EventService,       //useClass:ClassName
              {provide: TOAST_TOKEN, useValue:toastr},
+             //{provide: MinimaLogger, useValue:Logger},
+             //{provide: Logger, useFactory: Factory()},
              EventRouteActivator,
              EventListResolver,
              AuthService,
