@@ -56,7 +56,7 @@ declare let toastr : Toastr;
 
   ],
  
-  providers: [EventService,
+  providers: [EventService,       //useClass:ClassName
              {provide: TOAST_TOKEN, useValue:toastr},
              EventRouteActivator,
              EventListResolver,
