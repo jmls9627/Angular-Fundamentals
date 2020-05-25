@@ -49,11 +49,6 @@ declare let toastr : Toastr;
     SessionListComponent,
     CollapsibleWellComponent,
     DurationPipe
-    
-   
-   
-     
-
   ],
  
   providers: [EventService,       //useClass:ClassName
