@@ -18,15 +18,23 @@ import {EventsListComponent,
 
 import {EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/navbar.component';
-import { TOAST_TOKEN,Toastr} from "./common/toastr.service";
+
+import { JQ_TOKEN,
+         TOAST_TOKEN,
+         Toastr,
+         CollapsibleWellComponent 
+         
+        } from "../app/common/index";
+
 import { appRoutes } from "./routes";
 import { Error404Component } from './errors/404.component';
 import { AuthService } from './user/auth.service';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { CollapsibleWellComponent } from './common/collapsible-well.component';
 
 
-declare let toastr : Toastr;
+
+ let toastr : Toastr=window['toastr'];
+ let jQuery = window['$'];
 
 @NgModule({
   imports: [

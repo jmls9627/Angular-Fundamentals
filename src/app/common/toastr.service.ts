@@ -1,7 +1,5 @@
 import {  InjectionToken } from '@angular/core';
 
-
-
 export let TOAST_TOKEN=new InjectionToken<any>('toastr');
 
 export interface Toastr{
