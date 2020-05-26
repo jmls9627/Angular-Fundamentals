@@ -22,8 +22,9 @@ import { NavBarComponent } from './nav/navbar.component';
 import { JQ_TOKEN,
          TOAST_TOKEN,
          Toastr,
-         CollapsibleWellComponent 
-         
+         CollapsibleWellComponent,
+         SimpleModalContent
+
         } from "../app/common/index";
 
 import { appRoutes } from "./routes";
@@ -56,11 +57,13 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleWellComponent,
-    DurationPipe
+    DurationPipe,
+    SimpleModalContent,
   ],
  
   providers: [EventService,       //useClass:ClassName
              {provide: TOAST_TOKEN, useValue:toastr},
+             {provide: JQ_TOKEN, useValue:jQuery},
              //{provide: MinimaLogger, useValue:Logger},
              //{provide: Logger, useFactory: Factory()},
              EventRouteActivator,
