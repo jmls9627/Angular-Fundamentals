@@ -23,7 +23,8 @@ import { JQ_TOKEN,
          TOAST_TOKEN,
          Toastr,
          CollapsibleWellComponent,
-         SimpleModalContent
+         SimpleModalContent,
+         ModalTriggerDirective,
 
         } from "../app/common/index";
 
@@ -59,6 +60,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     CollapsibleWellComponent,
     DurationPipe,
     SimpleModalContent,
+    ModalTriggerDirective
   ],
  
   providers: [EventService,       //useClass:ClassName
