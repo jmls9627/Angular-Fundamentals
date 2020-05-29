@@ -12,7 +12,8 @@ import {EventsListComponent,
         EventListResolver,
         CreateSessionComponent,
         SessionListComponent,
-        DurationPipe
+        DurationPipe,
+        UpvoteComponent
 
       } from "./events/index";
 
@@ -60,7 +61,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     CollapsibleWellComponent,
     DurationPipe,
     SimpleModalContent,
-    ModalTriggerDirective
+    ModalTriggerDirective,
+    UpvoteComponent
   ],
  
   providers: [EventService,       //useClass:ClassName
