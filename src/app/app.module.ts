@@ -13,7 +13,8 @@ import {EventsListComponent,
         CreateSessionComponent,
         SessionListComponent,
         DurationPipe,
-        UpvoteComponent
+        UpvoteComponent,
+        VoterService
 
       } from "./events/index";
 
@@ -73,6 +74,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
              EventRouteActivator,
              EventListResolver,
              AuthService,
+             VoterService,
              
              {
                provide:'canDeactivateCreateEvent',

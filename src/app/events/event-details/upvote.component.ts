@@ -4,7 +4,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
    selector:'upvote',
-   styleUrls:['./upvote.component.css'],
+  // styleUrls:["/upvote.component.css"],
    template:`
    <div class="votingWidgetContainer pointable" (click)="onClick()">
      <div class="well votingWidget">
@@ -12,7 +12,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
         <i *ngIf="voted"  class="glyphicon glyphicon-heart"></i>
         <i *ngIf="!voted" class="glyphicon glyphicon-heart-empty"></i>
       <div>
-      <div class="badge-inverse votingCount">
+      <div class="badge badge-inverse votingCount">
         <div>{{count}}</div>
       </div>
    </div> 
@@ -21,7 +21,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 export class UpvoteComponent{
     @Input() count:number;
-    @Input() vouted:boolean;
+    @Input() voted:boolean;
     @Output() vote =new EventEmitter;
 
     onClick(){
